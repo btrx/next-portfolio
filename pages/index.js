@@ -1,6 +1,14 @@
 import Nav from '@/components/Nav'
 import Head from 'next/head'
 import Image from 'next/image'
+import FimgaPic from '../public/figma.svg'
+import VuePic from '../public/vue.svg'
+import ReactPic from '../public/react.svg'
+import JsPic from '../public/js.svg'
+import TailwindPic from '../public/tailwind.svg'
+import NextjsPic from '../public/next.svg'
+import Icons from '@/components/Icons'
+import Projects from '@/components/Projects'
 
 
 export default function Home() {
@@ -20,19 +28,60 @@ export default function Home() {
               <div className='mt-10 ml-24 w-4/12 justify-start'>
                 <p className='font-sans font-bold text-7xl'>Hi !</p>
                 <p className='font-sans font-bold text-7xl'>I Might Help Your Website Ideas to be True</p>
-              
                 <div className='flex text-center pt-10'>
                   <p className='font-sans font-medium text-xl'>Scroll to know more</p>
-                  <a href="#" className='p-1 w-9 border-2 border-black-700 rounded-full'>A</a>
+                  <a href="#" className='group p-1 w-fit border-2 border-black-700 rounded-full ml-2'>
+                    <Image
+                      src='/arrow-down.svg'
+                      width='20'
+                      height='20'
+                      className='group-hover:animate-slide-out-bottom'
+                      alt='arrow'
+                    />
+                  </a>
                 </div>
               </div>
               <div className='w-fit relative right-10 justify-end'>
                 <Image
                   src='/Headshot.png'
                   width='482'
-                  height='572' 
+                  height='572'
+                  alt='Headshot'
                 />
               </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className='h-[1290px] bg-about bg-cover pt-20'>
+            <p className='font-mono font-semibold text-5xl text-center'>A Little About Me</p>
+            <div className='flex justify-between'>
+              <Image
+                src='/half.png'
+                width='525'
+                height='525'
+                alt='Half-Image'
+              />
+              <div className='w-5/12 relative top-28 right-20 xl:right-32'>
+                <p className='font-mono font-semibold text-2xl leading-relaxed tracking-wide'>Hi there! My name is Doni Kusuma and I'm a Frontend Programmer and new to UI/UX designer with a focus on creating simple and user-friendly interfaces.</p>
+                <p className='font-mono font-semibold text-2xl my-5'>Here some tech stacks that i use</p>
+                <div className='flex'>
+                  <Icons src={FimgaPic} height='50' alt='figma' />
+                  <Icons src={VuePic} height='50' alt='vue' className='mx-5' />
+                  <Icons src={ReactPic} height='50' alt='vue' className='mx-5' />
+                  <Icons src={NextjsPic} width='100' alt='vue' className='mx-5' />
+                  <Icons src={JsPic} height='50' alt='vue' className='mx-5' />
+                  <Icons src={TailwindPic} height='40' alt='vue' />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className='relative -top-[600px]'>
+          <div className='h-screen pt-20'>
+            <p className='font-mono font-semibold text-5xl text-center'>Some of Projects Mine</p>
+            <div className='columns-3 gap-8'>
+              <Projects />
             </div>
           </div>
         </section>

@@ -10,10 +10,12 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'hero': "url('/hero.png')"
+        'hero': "url('/hero.png')",
+        'about': "url('/about.png')"
       },
       fontFamily: {
-        sans: ['var(--font-AB)', ...fontFamily.sans]
+        sans: ['var(--font-AB)', ...fontFamily.sans],
+        mono: ['var(--font-Epi)', ...fontFamily.mono]
       },
       colors: {
         black: {
@@ -27,6 +29,25 @@ module.exports = {
           700: "#1B1A1E",
           800: "#141316",
           900: "#0A090B"
+        }
+      },
+      animation: {
+        "slide-out-bottom": "slide-out-bottom 1.5s ease infinite"
+      },
+      keyframes: {
+        "slide-out-bottom": {
+          '0%': {
+            transform: 'translateY(-10px)',
+            opacity: '1'
+          },
+          '50%': {
+            transform: 'translateY(0px)',
+            opacity: '1'
+          },
+          '100%': {
+            transform: 'translateY(15px)',
+            opacity: '0'
+          }
         }
       }
     },
